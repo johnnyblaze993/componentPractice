@@ -1,26 +1,13 @@
-$color1: #3A015C;
-$color2: #4F0147;
-$color3: #35012C;
-$color4: #290025;
-$color5: #11001C;
-
-//create 3 contract textcolors for each color
-$contrastA: #FFFFFF;
-$contrastB: #F2F2F2;
-$contrastC: #E6E6E6;
+$primary: #13005A;
+$textColor: #03C988;
+$accent: #a4cdde;
 
 
-
-
-
-// global.scss
 
 @import '@fontsource/roboto/300.css';
 @import '@fontsource/roboto/400.css';
 @import '@fontsource/roboto/500.css';
 @import '@fontsource/roboto/700.css';
-
-
 
 
 
@@ -133,29 +120,15 @@ $font-weight-bold: 700;
     }
 }
 
-//raindown animation
-$rainbow: (
-    'blue': #A8D8EA,
-
-    'purple' : #AA96DA,
-    'pink': #FCBAD3,
-    'yello': #FFFFD2,
-
-);
-
 
 
 
 
 @export {
-    $color: $color1,
-    $color2,
-    $color3,
-    $color4,
-    $color5,
-    $contrastA,
-    $contrastB,
-    $contrastC,
+    $primary,
+    $textColor,
+    $accent,
+
     $breakpoint-small,
     $breakpoint-medium,
     $breakpoint-large,
@@ -181,9 +154,4 @@ $rainbow: (
     secondary-button,
     tertiary-button,
     fluid-type,
-
-
-
-
-
 }
