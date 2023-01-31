@@ -37,6 +37,17 @@ $font-family-primary: 'Roboto',
 $line-height-base: 1.5;
 $font-weight-bold: 700;
 
+$border-radius: 4px;
+$borderColor: #ccc;
+
+$box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+$primaryHover: #1a1a1a;
+
+
+
+
 
 
 @mixin flex-row {
@@ -125,9 +136,13 @@ $font-weight-bold: 700;
 
 
 @export {
-    $primary,
+    $primary: $primary,
     $textColor,
     $accent,
+    $border-radius,
+    $borderColor,
+    $box-shadow,
+    $primaryHover,
 
     $breakpoint-small,
     $breakpoint-medium,

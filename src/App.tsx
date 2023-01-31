@@ -1,10 +1,10 @@
-import React from "react";
 import Form from "./components/Form";
+import style from "./App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hey</h1>
+    <div className={style.app}>
+      <h1>Please sign in</h1>
 
       <Form />
     </div>

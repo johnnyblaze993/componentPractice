@@ -1,0 +1,29 @@
+@import '../src/style.module.scss';
+
+
+* {
+    @include box-sizing;
+
+}
+
+body {
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    line-height: $spacing-small;
+    color: $textColor;
+    background-color: $primary;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-large;
+
+}

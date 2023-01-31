@@ -1,0 +1,108 @@
+@import '../style.module.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: $spacing-large;
+    background-color: #f2f2f2;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+
+    & .input {
+        width: 100%;
+        margin-bottom: $spacing-small;
+        padding: $spacing-small;
+        border: 1px solid $borderColor;
+        border-radius: $border-radius;
+        background-color: $textColor;
+        color: $primary;
+        font-size: $font-size-base;
+        line-height: $spacing-small;
+        font-family: $font-family-primary;
+        box-shadow: $box-shadow;
+        transition: all 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $primary;
+            box-shadow: 0 0 0 3px $primary;
+        }
+    }
+
+    & .button {
+        width: 100%;
+        padding: $spacing-small;
+        border: none;
+        border-radius: $border-radius;
+        background-color: $primary;
+        color: $accent;
+        font-size: $font-size-base;
+        line-height: $spacing-small;
+        font-family: $font-family-primary;
+        box-shadow: $box-shadow;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $primaryHover;
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    padding: $spacing-large;
+    background-color: $textColor;
+    color: $primary;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+
+
+    & .modalButton {
+        width: 100%;
+        padding: $spacing-small;
+        border: none;
+        border-radius: $border-radius;
+        background-color: $primary;
+        color: $accent;
+        font-size: $font-size-base;
+        line-height: $spacing-small;
+        font-family: $font-family-primary;
+        box-shadow: $box-shadow;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $primaryHover;
+            cursor: pointer;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
