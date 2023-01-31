@@ -1,0 +1,97 @@
+// global.scss
+
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+
+
+$yellow: #FFF9B0;
+$orange: #FFD384;
+$orange-dark: #FF884B;
+$pink: #FF577F;
+$pink-light: #ff9ab2;
+
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+
+$font-size-base: 16px;
+$font-size-large: 24px;
+$font-size-small: 14px;
+$font-family-primary: 'Roboto',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+$line-height-base: 1.5;
+$font-weight-bold: 700;
+
+
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-center {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin small-only {
+    @media (max-width: $breakpoint-small) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-medium) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-large) {
+        @content;
+    }
+}
+
+@mixin transition {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@mixin box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
