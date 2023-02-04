@@ -1,6 +1,8 @@
 import { useState } from "react";
 import style from "./Form.module.scss";
 
+import ReactDOM from "react-dom";
+
 const Form: React.FC = () => {
   const [user, setUser] = useState({
     name: "",
@@ -71,6 +73,44 @@ const Form: React.FC = () => {
     });
   };
 
+  interface OverlayProps {
+    onClick: () => void;
+  }
+
+  const Overlay = (props: { onClick: () => void }) => {
+    const overlayElement = document.getElementById("overlay");
+    if (!overlayElement) return null;
+
+    return ReactDOM.createPortal(
+      <div className={style.overlay} onClick={props.onClick} />,
+      overlayElement
+    );
+  };
+
+  interface ModalProps {
+    errorMessage: string;
+  }
+
+  const Modal = (props: any) => {
+    const modalElement = document.getElementById("modal");
+    if (!modalElement) return null;
+
+    return ReactDOM.createPortal(
+      <div className={style.modal}>
+        <p>{errorMessage}</p>
+        <button
+          className={style.modalButton}
+          onClick={() => {
+            setError(false);
+          }}
+        >
+          okay jeez
+        </button>
+      </div>,
+      modalElement
+    );
+  };
+
   return (
     <>
       <form
@@ -130,24 +170,14 @@ const Form: React.FC = () => {
       </form>
       <div>
         {error && (
-          <div
-            className={style.overlay}
-            onClick={() => {
-              setError(false);
-            }}
-          >
-            <div className={style.modal}>
-              <p>{errorMessage}</p>
-              <button
-                className={style.modalButton}
-                onClick={() => {
-                  setError(false);
-                }}
-              >
-                okay jeez
-              </button>
-            </div>
-          </div>
+          <>
+            <Overlay
+              onClick={() => {
+                setError(false);
+              }}
+            />
+            <Modal errorMessage={errorMessage} />
+          </>
         )}
       </div>
     </>
