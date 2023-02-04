@@ -77,7 +77,7 @@ const Form: React.FC = () => {
     onClick: () => void;
   }
 
-  const Overlay = (props: { onClick: () => void }) => {
+  const Overlay = (props: OverlayProps) => {
     const overlayElement = document.getElementById("overlay");
     if (!overlayElement) return null;
 
@@ -91,7 +91,7 @@ const Form: React.FC = () => {
     errorMessage: string;
   }
 
-  const Modal = (props: any) => {
+  const Modal = (props: ModalProps) => {
     const modalElement = document.getElementById("modal");
     if (!modalElement) return null;
 
